@@ -1,5 +1,4 @@
 import type { Address, Hex } from "viem";
-import { stringToHex } from "viem";
 
 export const appName = "Paper Plane Loop";
 
@@ -9,10 +8,12 @@ export const contractAddress = (process.env
 
 export const hasContractAddress = /^0x[a-fA-F0-9]{40}$/.test(contractAddress);
 
-const builderCode = process.env.NEXT_PUBLIC_BASE_BUILDER_CODE ?? "";
+export const builderCode =
+  process.env.NEXT_PUBLIC_BASE_BUILDER_CODE ?? "bc_pgx07w61";
 
 export const attributionDataSuffix = (
-  builderCode ? stringToHex(builderCode) : "0x"
+  process.env.NEXT_PUBLIC_BASE_ENCODED_STRING ??
+  "0x62635f70677830377736310b0080218021802180218021802180218021"
 ) as Hex;
 
 export const hasAttributionDataSuffix = attributionDataSuffix !== "0x";

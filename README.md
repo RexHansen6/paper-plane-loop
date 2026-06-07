@@ -29,13 +29,14 @@ NEXT_PUBLIC_CONTRACT_ADDRESS=0xd6cc75b5ac6f45a9acba6c79576d3e1943f9a115
 <meta name="talentapp:project_verification" content="..." />
 ```
 
-4. After base.dev returns a builder code, set it for ERC-8021 calldata suffixes:
+4. The Base builder code and ERC-8021 encoded suffix are configured in `lib/constants.ts`:
 
 ```bash
-NEXT_PUBLIC_BASE_BUILDER_CODE=bc_...
+NEXT_PUBLIC_BASE_BUILDER_CODE=bc_pgx07w61
+NEXT_PUBLIC_BASE_ENCODED_STRING=0x62635f70677830377736310b0080218021802180218021802180218021
 ```
 
-`lib/wagmi.ts` adds the resulting hex suffix to the Wagmi/Viem client. Every
+`lib/wagmi.ts` adds the encoded suffix to the Wagmi/Viem client. Every
 `writeContract` call in `app/page.tsx` also passes `dataSuffix` explicitly.
 
 ## Wallets
