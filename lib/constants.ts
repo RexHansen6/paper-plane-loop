@@ -5,7 +5,7 @@ export const appName = "Paper Plane Loop";
 
 export const contractAddress = (process.env
   .NEXT_PUBLIC_CONTRACT_ADDRESS ??
-  "0x3Da427df87bBD6CE3B7ed3aB8F7c7977136173CA") as Address;
+  "0xd6cc75b5ac6f45a9acba6c79576d3e1943f9a115") as Address;
 
 export const hasContractAddress = /^0x[a-fA-F0-9]{40}$/.test(contractAddress);
 

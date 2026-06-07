@@ -19,7 +19,7 @@ beyond Base gas.
 2. Set the deployed contract address:
 
 ```bash
-NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xd6cc75b5ac6f45a9acba6c79576d3e1943f9a115
 ```
 
 3. Confirm the hard-coded Base and Talent verification tags in `app/layout.tsx`:
