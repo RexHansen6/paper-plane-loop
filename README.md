@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Paper Plane Loop
 
-## Getting Started
+A mobile-first Base Mini App for a tiny onchain flight log. Users connect a
+wallet, then call `foldPlane()`, `launchPlane()`, and `landPlane()` on the
+`PaperPlaneLoop` contract. There are no tokens, points, fees, invites, or limits
+beyond Base gas.
 
-First, run the development server:
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Wagmi native config
+- Viem
+- Tailwind CSS
+
+## Required Setup
+
+1. Deploy `contracts/PaperPlaneLoop.sol` on Base.
+2. Set the deployed contract address:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+NEXT_PUBLIC_CONTRACT_ADDRESS=0x...
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+3. Confirm the hard-coded Base and Talent verification tags in `app/layout.tsx`:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```tsx
+<meta name="base:app_id" content="6a252f6095cfa95c11629bb4" />
+<meta name="talentapp:project_verification" content="..." />
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. After base.dev returns a builder code, set it for ERC-8021 calldata suffixes:
 
-## Learn More
+```bash
+NEXT_PUBLIC_BASE_BUILDER_CODE=bc_...
+```
 
-To learn more about Next.js, take a look at the following resources:
+`lib/wagmi.ts` adds the resulting hex suffix to the Wagmi/Viem client. Every
+`writeContract` call in `app/page.tsx` also passes `dataSuffix` explicitly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Wallets
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The app uses Wagmi native connectors only:
 
-## Deploy on Vercel
+- `injected()` for Base App injected wallet, MetaMask, OKX, and other injected wallets
+- `coinbaseWallet()` for Coinbase Wallet
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+RainbowKit and WalletConnect are not used.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Local Development
+
+```bash
+npm install
+npm run dev
+```
+
+Open `http://localhost:3000`.
+
+## Verification
+
+```bash
+npm run lint
+npm run build
+```
+
+Before publishing, confirm:
+
+- `app/layout.tsx` contains the correct hard-coded `<meta name="base:app_id">`
+- `NEXT_PUBLIC_CONTRACT_ADDRESS` points to the deployed Base contract
+- `NEXT_PUBLIC_BASE_BUILDER_CODE` is set after base.dev verification
+- Base App, Coinbase Wallet, MetaMask, and OKX can connect
+- Fold Plane, Launch Plane, and Land Plane send transactions
+- Basescan transaction input data ends with the builder-code suffix
+- base.dev Offchain and Onchain dashboards show activity
