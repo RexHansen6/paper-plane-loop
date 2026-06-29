@@ -7,3 +7,10 @@ Users connect a wallet and interact with the `PaperPlaneLoop` contract by callin
 - `foldPlane()`
 - `launchPlane()`
 - `landPlane()`
+
+The app is intentionally simple.  
+There are no points, fees, invites, or app-level limits beyond Base gas.
+
+Repository: https://github.com/RexHansen6/paper-plane-loop.git
+
+## Overview
