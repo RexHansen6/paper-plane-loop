@@ -119,3 +119,12 @@ npm run dev
 Open the app in your browser:
 
 ```text
+http://localhost:3000
+```
+
+## Usage
+
+1. Open the app.
+2. Connect a supported wallet.
+3. Select **Fold Plane** to call `foldPlane()`.
+4. Select **Launch Plane** to call `launchPlane()`.
