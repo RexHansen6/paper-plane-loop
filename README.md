@@ -162,3 +162,12 @@ Before publishing, confirm the following:
 - **Launch Plane** sends a transaction
 - **Land Plane** sends a transaction
 - Basescan transaction input data ends with the builder-code suffix
+- base.dev Offchain and Onchain dashboards show activity
+
+## Project Notes
+
+This project is intentionally minimal.
+
+It focuses on a single contract interaction loop and a clean mobile-first user experience.
+
+Keep the contract address, metadata, and builder-code configuration current before deploying or publishing updates.
