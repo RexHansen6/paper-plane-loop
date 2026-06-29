@@ -66,3 +66,12 @@ Use the address for your deployed Base contract.
 Confirm the Base and Talent verification tags in `app/layout.tsx`.
 
 Example:
+
+```tsx
+<meta name="base:app_id" content="6a252f6095cfa95c11629bb4" />
+<meta name="talentapp:project_verification" content="..." />
+```
+
+Keep these values aligned with the relevant project verification settings.
+
+## Base Builder Configuration
