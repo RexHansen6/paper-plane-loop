@@ -145,3 +145,12 @@ Create a production build:
 
 ```bash
 npm run build
+```
+
+## Pre-Publish Checklist
+
+Before publishing, confirm the following:
+
+- `app/layout.tsx` contains the correct hard-coded `<meta name="base:app_id">`
+- `NEXT_PUBLIC_CONTRACT_ADDRESS` points to the deployed Base contract
+- `NEXT_PUBLIC_BASE_BUILDER_CODE` is set after base.dev verification
