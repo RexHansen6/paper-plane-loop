@@ -109,3 +109,13 @@ Install dependencies:
 ```bash
 npm install
 ```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open the app in your browser:
+
+```text
