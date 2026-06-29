@@ -154,3 +154,11 @@ Before publishing, confirm the following:
 - `app/layout.tsx` contains the correct hard-coded `<meta name="base:app_id">`
 - `NEXT_PUBLIC_CONTRACT_ADDRESS` points to the deployed Base contract
 - `NEXT_PUBLIC_BASE_BUILDER_CODE` is set after base.dev verification
+- Base App can connect
+- Coinbase Wallet can connect
+- MetaMask can connect
+- OKX can connect
+- **Fold Plane** sends a transaction
+- **Launch Plane** sends a transaction
+- **Land Plane** sends a transaction
+- Basescan transaction input data ends with the builder-code suffix
