@@ -75,3 +75,12 @@ Example:
 Keep these values aligned with the relevant project verification settings.
 
 ## Base Builder Configuration
+
+The Base builder code and ERC-8021 encoded suffix are configured in `lib/constants.ts`.
+
+Example:
+
+```bash
+NEXT_PUBLIC_BASE_BUILDER_CODE=bc_pgx07w61
+NEXT_PUBLIC_BASE_ENCODED_STRING=0x62635f70677830377736310b0080218021802180218021802180218021
+```
