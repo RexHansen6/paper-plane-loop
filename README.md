@@ -41,3 +41,12 @@ Each action is sent as a transaction to the deployed `PaperPlaneLoop` contract o
 - TypeScript
 - Wagmi native config
 - Viem
+- Tailwind CSS
+
+## Contract Setup
+
+Deploy the contract located at:
+
+```text
+contracts/PaperPlaneLoop.sol
+```
