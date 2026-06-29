@@ -84,3 +84,11 @@ Example:
 NEXT_PUBLIC_BASE_BUILDER_CODE=bc_pgx07w61
 NEXT_PUBLIC_BASE_ENCODED_STRING=0x62635f70677830377736310b0080218021802180218021802180218021
 ```
+
+The Wagmi/Viem client in `lib/wagmi.ts` adds the encoded suffix.
+
+Each `writeContract` call in `app/page.tsx` also passes `dataSuffix` explicitly.
+
+## Wallet Support
+
+The app uses Wagmi native connectors only.
