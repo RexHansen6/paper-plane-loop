@@ -136,3 +136,12 @@ The app sends each action directly to the configured `PaperPlaneLoop` contract.
 ## Verification Commands
 
 Run linting:
+
+```bash
+npm run lint
+```
+
+Create a production build:
+
+```bash
+npm run build
