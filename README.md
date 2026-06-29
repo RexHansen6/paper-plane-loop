@@ -58,3 +58,11 @@ Example:
 ```bash
 NEXT_PUBLIC_CONTRACT_ADDRESS=0xd6cc75b5ac6f45a9acba6c79576d3e1943f9a115
 ```
+
+Use the address for your deployed Base contract.
+
+## App Metadata
+
+Confirm the Base and Talent verification tags in `app/layout.tsx`.
+
+Example:
