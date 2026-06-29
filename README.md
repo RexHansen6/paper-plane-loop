@@ -101,3 +101,11 @@ Supported connector setup:
 RainbowKit is not used.
 
 WalletConnect is not used.
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
