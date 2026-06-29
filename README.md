@@ -14,3 +14,13 @@ There are no points, fees, invites, or app-level limits beyond Base gas.
 Repository: https://github.com/RexHansen6/paper-plane-loop.git
 
 ## Overview
+
+Paper Plane Loop provides a lightweight interface for recording a small sequence of onchain plane actions.
+
+The experience is designed around three actions:
+
+1. Fold a paper plane.
+2. Launch the paper plane.
+3. Land the paper plane.
+
+Each action is sent as a transaction to the deployed `PaperPlaneLoop` contract on Base.
