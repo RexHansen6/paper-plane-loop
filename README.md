@@ -33,3 +33,11 @@ Each action is sent as a transaction to the deployed `PaperPlaneLoop` contract o
 - Contract writes for folding, launching, and landing a plane
 - Viem-based client configuration
 - Tailwind CSS styling
+- Builder-code suffix support for Base verification
+
+## Stack
+
+- Next.js App Router
+- TypeScript
+- Wagmi native config
+- Viem
