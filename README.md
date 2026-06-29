@@ -92,3 +92,12 @@ Each `writeContract` call in `app/page.tsx` also passes `dataSuffix` explicitly.
 ## Wallet Support
 
 The app uses Wagmi native connectors only.
+
+Supported connector setup:
+
+- `injected()` for Base App injected wallet, MetaMask, OKX, and other injected wallets
+- `coinbaseWallet()` for Coinbase Wallet
+
+RainbowKit is not used.
+
+WalletConnect is not used.
