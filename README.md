@@ -128,3 +128,11 @@ http://localhost:3000
 2. Connect a supported wallet.
 3. Select **Fold Plane** to call `foldPlane()`.
 4. Select **Launch Plane** to call `launchPlane()`.
+5. Select **Land Plane** to call `landPlane()`.
+6. Confirm each transaction in your wallet.
+
+The app sends each action directly to the configured `PaperPlaneLoop` contract.
+
+## Verification Commands
+
+Run linting:
