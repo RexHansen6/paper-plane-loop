@@ -24,3 +24,12 @@ The experience is designed around three actions:
 3. Land the paper plane.
 
 Each action is sent as a transaction to the deployed `PaperPlaneLoop` contract on Base.
+
+## Features
+
+- Mobile-first interface
+- Base Mini App metadata support
+- Wallet connection through Wagmi native connectors
+- Contract writes for folding, launching, and landing a plane
+- Viem-based client configuration
+- Tailwind CSS styling
