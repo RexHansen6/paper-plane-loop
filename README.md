@@ -50,3 +50,11 @@ Deploy the contract located at:
 ```text
 contracts/PaperPlaneLoop.sol
 ```
+
+Deploy it on Base, then configure the deployed contract address.
+
+Example:
+
+```bash
+NEXT_PUBLIC_CONTRACT_ADDRESS=0xd6cc75b5ac6f45a9acba6c79576d3e1943f9a115
+```
